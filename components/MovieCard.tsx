@@ -13,8 +13,9 @@ const MovieCard: React.FC<MovieCardProps> =({
     const router=useRouter();
     const {openModal} = useInfoModal();
     return (
-        <div className='group bg-zinc-900 col-span relative h-[12vw'>
+        <div className='group bg-zinc-900 col-span relative h-[12vw]'>
             <img
+            onClick={() =>router.push(`/watch/${data?.id}`)}
             className='
             cursor-pointer
             object-cover
@@ -49,6 +50,7 @@ const MovieCard: React.FC<MovieCardProps> =({
             '
             >
                 <img
+                onClick={() =>router.push(`/watch/${data?.id}`)}
                 className='
                 cursor-pointer
                 object-cover
